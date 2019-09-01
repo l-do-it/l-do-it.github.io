@@ -152,6 +152,93 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-类和对象" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/01/类和对象/">JS类和对象</a>
+    </h1>
+  
+
+        
+        <a href="/2019/09/01/类和对象/" class="archive-article-date">
+  	<time datetime="2019-09-01T11:09:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="类的声明"><a href="#类的声明" class="headerlink" title="类的声明"></a>类的声明</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> 类名(<span class="params">形参<span class="number">1</span>,形参<span class="number">2.</span>...</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.属性名<span class="number">1</span>=形参<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">this</span>.属性名<span class="number">2</span>=形参<span class="number">2</span>;</span><br><span class="line">    .......</span><br><span class="line">    <span class="keyword">this</span>.属性名 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name, age</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.name = name;</span><br><span class="line">	<span class="keyword">this</span>.age = age;</span><br><span class="line">	<span class="keyword">this</span>.test = <span class="function"><span class="keyword">function</span>(<span class="params">a</span>)</span>&#123;</span><br><span class="line">		alert(a);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="类的使用"><a href="#类的使用" class="headerlink" title="类的使用"></a>类的使用</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> 对象名 = <span class="keyword">new</span> 类名(实参<span class="number">1</span>,实参<span class="number">2.</span>....);</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注意:</p>
+<p>​    js类中的内容只是对象的公共部分,每个对象还可以进行自定义的进行扩充</p>
+</blockquote>
+<h1 id="类的”继承”-prototype关键字"><a href="#类的”继承”-prototype关键字" class="headerlink" title="类的”继承”:prototype关键字"></a>类的”继承”:prototype关键字</h1><ul>
+<li>同坐protype关键字实现了不同对象之间的数据共享<ul>
+<li>作用1:实现某个类的所有子对象的方法区对象的共享,节省内存.</li>
+</ul>
+</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/01/类和对象/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-虚拟机CentOS镜像安装" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -172,7 +259,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="VMware下载安装教程"><a href="#VMware下载安装教程" class="headerlink" title="VMware下载安装教程"></a><a href="https://blog.csdn.net/qq_40950957/article/details/80467513" target="_blank" rel="noopener">VMware下载安装教程</a></h2><h2 id="镜像下载"><a href="#镜像下载" class="headerlink" title="镜像下载"></a>镜像下载</h2><ul>
+        <h2 id="VMware下载安装教程"><a href="#VMware下载安装教程" class="headerlink" title="VMware下载安装教程"></a><a href="https://blog.csdn.net/qq_40950957/article/details/80467513" target="_blank" rel="noopener">VMware下载安装教程</a></h2><h2 id="VMware全版本激活秘钥"><a href="#VMware全版本激活秘钥" class="headerlink" title="VMware全版本激活秘钥"></a><a href="https://www.52pojie.cn/thread-998391-1-1.html" target="_blank" rel="noopener">VMware全版本激活秘钥</a></h2><h2 id="镜像下载"><a href="#镜像下载" class="headerlink" title="镜像下载"></a>镜像下载</h2><ul>
 <li>Centos官网:<a href="http://isoredirect.centos.org/centos/7/isos/x86_64/CentOS-7-x86_64-DVD-1810.iso" target="_blank" rel="noopener">http://isoredirect.centos.org/centos/7/isos/x86_64/CentOS-7-x86_64-DVD-1810.iso</a></li>
 <li>Centos764位下载地址:<a href="http://mirrors.njupt.edu.cn/centos/7.6.1810/isos/x86_64/CentOS-7-x86_64-DVD-1810.iso" target="_blank" rel="noopener">http://mirrors.njupt.edu.cn/centos/7.6.1810/isos/x86_64/CentOS-7-x86_64-DVD-1810.iso</a></li>
 </ul>
@@ -541,15 +628,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">虚拟机</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
