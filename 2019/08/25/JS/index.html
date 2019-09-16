@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="凌">
 <meta property="og:description" content="js的声明 在head标签中使用script标签进行js代码域的声明  1234&amp;lt;!-- js代码域 --&amp;gt;		&amp;lt;script type=&quot;text/javascript&quot;&amp;gt;			alert(&quot;这是我的第一个js&quot;)		&amp;lt;/script&amp;gt;   作用： 声明js代码域   特点：js的代码只会作用于当前网页     在head标签中使用script标签引入外部声明">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-11T13:59:44.622Z">
+<meta property="og:updated_time" content="2019-09-11T15:42:00.405Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS">
 <meta name="twitter:description" content="js的声明 在head标签中使用script标签进行js代码域的声明  1234&amp;lt;!-- js代码域 --&amp;gt;		&amp;lt;script type=&quot;text/javascript&quot;&amp;gt;			alert(&quot;这是我的第一个js&quot;)		&amp;lt;/script&amp;gt;   作用： 声明js代码域   特点：js的代码只会作用于当前网页     在head标签中使用script标签引入外部声明">
@@ -776,7 +776,25 @@
 </ul>
 </li>
 </ul>
-<h2 id="子窗口方法"><a href="#子窗口方法" class="headerlink" title="子窗口方法"></a>子窗口方法</h2><h2 id="子页面调用父页面的函数"><a href="#子页面调用父页面的函数" class="headerlink" title="子页面调用父页面的函数"></a>子页面调用父页面的函数</h2><h2 id="js的window对象的常用属性"><a href="#js的window对象的常用属性" class="headerlink" title="js的window对象的常用属性"></a>js的window对象的常用属性</h2>
+<h2 id="子窗口方法"><a href="#子窗口方法" class="headerlink" title="子窗口方法"></a>子窗口方法</h2><ul>
+<li><p>window.open(‘子页面的资源(相对路径)’,’打开方式’,’配置’);</p>
+<ul>
+<li><p>示例:</p>
+</li>
+<li><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.open(<span class="string">'son.html'</span>,<span class="string">'newwindow'</span>,<span class="string">'height=100,width=400,top=100px,left=300px,toolbar=no,menubar=no,scrollbars=no,resizable=no,location=no,status=no'</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>注意:</p>
+<ul>
+<li>关闭子页面方法window.close(),但是此方法只能关闭open方法打开的子页面</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="子页面调用父页面的函数"><a href="#子页面调用父页面的函数" class="headerlink" title="子页面调用父页面的函数"></a>子页面调用父页面的函数</h2><ul>
+<li>window.opener 父页面函数</li>
+</ul>
+<h2 id="js的window对象的常用属性"><a href="#js的window对象的常用属性" class="headerlink" title="js的window对象的常用属性"></a>js的window对象的常用属性</h2>
       
 
       
@@ -1034,6 +1052,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
               <li class="article-tag-list-item">
