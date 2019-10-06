@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Tomcat | 凌</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Tomcat##解压后目录:  bin:可执行文件(startup.bat shutdown.bat) conf:配置文件(server.xml) lib:tomcat依赖的jar文件 log:日志文件(记录出错等信息) temp:临时文件 webapps:可执行的项目(将我们开放的项目 放入该目录) work:存放由jsp翻译撑得java,以及编辑成的class文件(jsp -&amp;gt; java">
+  <meta name="description" content="Tomcat解压后目录: bin:可执行文件(startup.bat shutdown.bat) conf:配置文件(server.xml) lib:tomcat依赖的jar文件 log:日志文件(记录出错等信息) temp:临时文件 webapps:可执行的项目(将我们开放的项目 放入该目录) work:存放由jsp翻译撑得java,以及编辑成的class文件(jsp -&amp;gt; java -&amp;">
 <meta name="keywords" content="javaweb">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Tomcat">
 <meta property="og:url" content="http://yoursite.com/2019/09/23/Tomcat/index.html">
 <meta property="og:site_name" content="凌">
-<meta property="og:description" content="Tomcat##解压后目录:  bin:可执行文件(startup.bat shutdown.bat) conf:配置文件(server.xml) lib:tomcat依赖的jar文件 log:日志文件(记录出错等信息) temp:临时文件 webapps:可执行的项目(将我们开放的项目 放入该目录) work:存放由jsp翻译撑得java,以及编辑成的class文件(jsp -&amp;gt; java">
+<meta property="og:description" content="Tomcat解压后目录: bin:可执行文件(startup.bat shutdown.bat) conf:配置文件(server.xml) lib:tomcat依赖的jar文件 log:日志文件(记录出错等信息) temp:临时文件 webapps:可执行的项目(将我们开放的项目 放入该目录) work:存放由jsp翻译撑得java,以及编辑成的class文件(jsp -&amp;gt; java -&amp;">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-27T12:44:31.279Z">
+<meta property="og:updated_time" content="2019-10-03T14:00:27.730Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Tomcat">
-<meta name="twitter:description" content="Tomcat##解压后目录:  bin:可执行文件(startup.bat shutdown.bat) conf:配置文件(server.xml) lib:tomcat依赖的jar文件 log:日志文件(记录出错等信息) temp:临时文件 webapps:可执行的项目(将我们开放的项目 放入该目录) work:存放由jsp翻译撑得java,以及编辑成的class文件(jsp -&amp;gt; java">
+<meta name="twitter:description" content="Tomcat解压后目录: bin:可执行文件(startup.bat shutdown.bat) conf:配置文件(server.xml) lib:tomcat依赖的jar文件 log:日志文件(记录出错等信息) temp:临时文件 webapps:可执行的项目(将我们开放的项目 放入该目录) work:存放由jsp翻译撑得java,以及编辑成的class文件(jsp -&amp;gt; java -&amp;">
   
     <link rel="alternative" href="/atom.xml" title="凌" type="application/atom+xml">
   
@@ -167,8 +167,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Tomcat"><a href="#Tomcat" class="headerlink" title="Tomcat"></a>Tomcat</h1><p>##解压后目录:</p>
-<ol>
+        <h1 id="Tomcat"><a href="#Tomcat" class="headerlink" title="Tomcat"></a>Tomcat</h1><h2 id="解压后目录"><a href="#解压后目录" class="headerlink" title="解压后目录:"></a>解压后目录:</h2><ol>
 <li>bin:可执行文件(startup.bat shutdown.bat)</li>
 <li>conf:配置文件(server.xml)</li>
 <li>lib:tomcat依赖的jar文件</li>
@@ -195,8 +194,7 @@
 <p>docBase:实际路径</p>
 <p>path:虚拟路径(绝对路径,相对路径(相对于webapps))</p>
 </blockquote>
-<p>###方式一:</p>
-<ul>
+<h3 id="方式一"><a href="#方式一" class="headerlink" title="方式一:"></a>方式一:</h3><ul>
 <li>conf/server.xml中配置<ul>
 <li>host标签中:<contest docbase="G:\apache-tomcat\apache-tomcat-8.5.46\JspProject" path="/JspProject"></contest></li>
 </ul>
@@ -205,8 +203,7 @@
 </ul>
 <h3 id="方式二"><a href="#方式二" class="headerlink" title="方式二:"></a>方式二:</h3><p>目录:G:\apache-tomcat\apache-tomcat-8.5.46\conf\Catalina\localhost</p>
 <p>新建 :”项目名.xml”中新增一行:<context docbase="G:\apache-tomcat\apache-tomcat-8.5.46\JspProject" path="/JspProject"></context></p>
-<p>##虚拟主机</p>
-<blockquote>
+<h2 id="虚拟主机"><a href="#虚拟主机" class="headerlink" title="虚拟主机"></a>虚拟主机</h2><blockquote>
 <p>通过<a href="http://www.test.com访问本机" target="_blank" rel="noopener">www.test.com访问本机</a></p>
 </blockquote>
 <ol>
@@ -357,7 +354,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Tomcat"><span class="toc-number">1.</span> <span class="toc-text">Tomcat</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#虚拟路径"><span class="toc-number">1.1.</span> <span class="toc-text">虚拟路径</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#方式二"><span class="toc-number">1.1.1.</span> <span class="toc-text">方式二:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JSP的响应过程"><span class="toc-number">1.2.</span> <span class="toc-text">JSP的响应过程</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Tomcat"><span class="toc-number">1.</span> <span class="toc-text">Tomcat</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#解压后目录"><span class="toc-number">1.1.</span> <span class="toc-text">解压后目录:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#虚拟路径"><span class="toc-number">1.2.</span> <span class="toc-text">虚拟路径</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#方式一"><span class="toc-number">1.2.1.</span> <span class="toc-text">方式一:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方式二"><span class="toc-number">1.2.2.</span> <span class="toc-text">方式二:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#虚拟主机"><span class="toc-number">1.3.</span> <span class="toc-text">虚拟主机</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JSP的响应过程"><span class="toc-number">1.4.</span> <span class="toc-text">JSP的响应过程</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -485,11 +482,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
+                <a href="javascript:void(0)" class="js-tag color3">javaweb</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">javaweb</a>
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">

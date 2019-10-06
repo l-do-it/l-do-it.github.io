@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>eclipse开发web项目 | 凌</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="#在Eclipse中创建的web项目:  浏览器可以直接访问WebContent中的文件: 例如:http://localhost:8888/MyJsProject/index1.jsp,其中的index1.jsp就在WebContent目录中; 但是WEB-INF中的文件 无法通过客户端(浏览器)直接访问,只能通过请求来访问 注意:并不是任何内部跳转都能访问WEB-INF; 原因:跳转有两种方式">
+  <meta name="description" content="在Eclipse中创建的web项目: 浏览器可以直接访问WebContent中的文件: 例如:http://localhost:8888/MyJsProject/index1.jsp,其中的index1.jsp就在WebContent目录中; 但是WEB-INF中的文件 无法通过客户端(浏览器)直接访问,只能通过请求来访问 注意:并不是任何内部跳转都能访问WEB-INF; 原因:跳转有两种方式 请">
 <meta name="keywords" content="javaweb">
 <meta property="og:type" content="article">
 <meta property="og:title" content="eclipse开发web项目">
 <meta property="og:url" content="http://yoursite.com/2019/09/27/eclipse开发web项目/index.html">
 <meta property="og:site_name" content="凌">
-<meta property="og:description" content="#在Eclipse中创建的web项目:  浏览器可以直接访问WebContent中的文件: 例如:http://localhost:8888/MyJsProject/index1.jsp,其中的index1.jsp就在WebContent目录中; 但是WEB-INF中的文件 无法通过客户端(浏览器)直接访问,只能通过请求来访问 注意:并不是任何内部跳转都能访问WEB-INF; 原因:跳转有两种方式">
+<meta property="og:description" content="在Eclipse中创建的web项目: 浏览器可以直接访问WebContent中的文件: 例如:http://localhost:8888/MyJsProject/index1.jsp,其中的index1.jsp就在WebContent目录中; 但是WEB-INF中的文件 无法通过客户端(浏览器)直接访问,只能通过请求来访问 注意:并不是任何内部跳转都能访问WEB-INF; 原因:跳转有两种方式 请">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-03T13:10:04.749Z">
+<meta property="og:updated_time" content="2019-10-04T14:15:11.302Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="eclipse开发web项目">
-<meta name="twitter:description" content="#在Eclipse中创建的web项目:  浏览器可以直接访问WebContent中的文件: 例如:http://localhost:8888/MyJsProject/index1.jsp,其中的index1.jsp就在WebContent目录中; 但是WEB-INF中的文件 无法通过客户端(浏览器)直接访问,只能通过请求来访问 注意:并不是任何内部跳转都能访问WEB-INF; 原因:跳转有两种方式">
+<meta name="twitter:description" content="在Eclipse中创建的web项目: 浏览器可以直接访问WebContent中的文件: 例如:http://localhost:8888/MyJsProject/index1.jsp,其中的index1.jsp就在WebContent目录中; 但是WEB-INF中的文件 无法通过客户端(浏览器)直接访问,只能通过请求来访问 注意:并不是任何内部跳转都能访问WEB-INF; 原因:跳转有两种方式 请">
   
     <link rel="alternative" href="/atom.xml" title="凌" type="application/atom+xml">
   
@@ -167,8 +167,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#在Eclipse中创建的web项目:</p>
-<ol>
+        <h1 id="在Eclipse中创建的web项目"><a href="#在Eclipse中创建的web项目" class="headerlink" title="在Eclipse中创建的web项目:"></a>在Eclipse中创建的web项目:</h1><ol>
 <li>浏览器可以直接访问WebContent中的文件:<ol>
 <li>例如:<a href="http://localhost:8888/MyJsProject/index1.jsp" target="_blank" rel="noopener">http://localhost:8888/MyJsProject/index1.jsp</a>,其中的index1.jsp就在WebContent目录中;</li>
 <li>但是WEB-INF中的文件 无法通过客户端(浏览器)直接访问,只能通过请求来访问</li>
@@ -196,8 +195,7 @@
 <blockquote>
 <p>注意:一般建议 将celipse中的tomcat与 本地tomcat的配置信息保持一致:将eclipse中的tomcat设置为托管模式:[第一次]创建tomcat实例之后,双击该实例,选择Server Locattion的第二项</p>
 </blockquote>
-<p>#统一字符编码</p>
-<ol>
+<h1 id="统一字符编码"><a href="#统一字符编码" class="headerlink" title="统一字符编码"></a>统一字符编码</h1><ol>
 <li>编码分类<ol>
 <li>设置jsp文件的编码(jsp文件中的pageEnconding属性): jsp-&gt; java</li>
 </ol>
@@ -265,14 +263,36 @@
 <ol>
 <li><p>常用方法</p>
 </li>
-<li><figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">String <span class="title">getParameter</span><span class="params">(String name)</span>  根据请求的字段名key,返回字段值value</span></span><br></pre></td></tr></table></figure>
+<li><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">   <span class="function">String <span class="title">getParameter</span><span class="params">(String name)</span>  根据请求的字段名<span class="title">key</span><span class="params">(input标签的name属性)</span>,返回字段值<span class="title">value</span><span class="params">(input标签的value属性值)</span></span></span><br><span class="line"><span class="function">   String[] <span class="title">getParameterValues</span><span class="params">(String name)</span>: 根据请求的字段名key,返回多个字段值<span class="title">value</span><span class="params">()</span></span></span><br><span class="line"><span class="function">   <span class="keyword">void</span> <span class="title">setcharacterEnconding</span><span class="params">(<span class="string">"编码格式utf-8"</span>)</span></span>; 设置请求编码 tomcat7一起爱你默认iso-<span class="number">8859</span>-<span class="number">1</span>,tomcat8以后改为UTF-<span class="number">8</span></span><br><span class="line">getRequestDispatcher(<span class="string">"b.jsp"</span>).forward(request,response); 请求转发 的方式跳转界面A-&gt;B</span><br><span class="line">   getServerContext(); 获取项目的ServletContext对象</span><br></pre></td></tr></table></figure>
+
+
+
+
 </li>
 </ol>
 </li>
 </ol>
 </li>
-<li><p>session</p>
+</ol>
 </li>
+</ol>
+<ol start="4">
+<li><p>response:响应对象</p>
+<ol>
+<li><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">addCookie</span><span class="params">(Cookie cookie )</span></span>;服务端向客户端增加cookie对象</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">sendRedirect</span><span class="params">(String location)</span> <span class="keyword">throws</span> IOException</span>; 页面跳转的一种方式(重定向)</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ol>
+</li>
+</ol>
+<ol start="2">
+<li><ol start="5">
+<li>session</li>
+</ol>
+</li>
+</ol>
+<ol start="6">
 <li><p>application</p>
 </li>
 <li><p>config</p>
@@ -282,9 +302,52 @@
 <li><p>exception</p>
 </li>
 </ol>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><h4 id="注册"><a href="#注册" class="headerlink" title="注册"></a>注册</h4><ol>
+<li><p>register.jsp</p>
+<ol>
+<li><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page language=<span class="string">"java"</span> contentType=<span class="string">"text/html; charset=UTF-8"</span></span><br><span class="line">     pageEncoding=<span class="string">"UTF-8"</span>%&gt;</span><br><span class="line"> &lt;!DOCTYPE html&gt;</span><br><span class="line"> &lt;html&gt;</span><br><span class="line"> &lt;head&gt;</span><br><span class="line"> &lt;meta charset=<span class="string">"UTF-8"</span>&gt;</span><br><span class="line"> &lt;title&gt;Insert title here&lt;/title&gt;</span><br><span class="line"> &lt;/head&gt;</span><br><span class="line"> &lt;body&gt;</span><br><span class="line"> 	&lt;form action=<span class="string">"show.jsp"</span> method=<span class="string">"post"</span>&gt;</span><br><span class="line"> 		用户名:&lt;input type=<span class="string">"text"</span> name=<span class="string">"uname"</span> values=<span class="string">"zs"</span>/&gt;&lt;br/&gt;</span><br><span class="line"> 		密码:&lt;input type=<span class="string">"password"</span> name=<span class="string">"upwd"</span>/&gt;&lt;br/&gt;</span><br><span class="line"> 		年龄:&lt;input type=<span class="string">"text"</span> name=<span class="string">"uage"</span>/&gt;&lt;br/&gt;</span><br><span class="line"> 		爱好&lt;br/&gt;</span><br><span class="line"> 		&lt;input type=<span class="string">"checkbox"</span> name=<span class="string">"uhobbies"</span> value=<span class="string">"足球"</span>/&gt;足球,</span><br><span class="line"> 		&lt;input type=<span class="string">"checkbox"</span> name=<span class="string">"uhobbies"</span> value=<span class="string">"篮球"</span>/&gt;篮球,</span><br><span class="line"> 		&lt;input type=<span class="string">"checkbox"</span> name=<span class="string">"uhobbies"</span> value=<span class="string">"乒乓球"</span>/&gt;乒乓球&lt;br/&gt;</span><br><span class="line"> 		&lt;input type=<span class="string">"submit"</span> value=<span class="string">"注册"</span>&gt;</span><br><span class="line"> 	&lt;/form&gt;</span><br><span class="line"> &lt;/body&gt;</span><br><span class="line"> &lt;/html&gt;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
+</li>
+<li><p>show.jsp</p>
+<ol>
+<li><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page language=<span class="string">"java"</span> contentType=<span class="string">"text/html; charset=UTF-8"</span></span><br><span class="line">	pageEncoding=<span class="string">"UTF-8"</span>%&gt;</span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta charset=<span class="string">"UTF-8"</span>&gt;</span><br><span class="line">&lt;title&gt;Insert title here&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">	&lt;%</span><br><span class="line">		request.setCharacterEncoding(<span class="string">"utf-8"</span>);</span><br><span class="line">		String name = request.getParameter(<span class="string">"uname"</span>);</span><br><span class="line">		<span class="keyword">int</span> age = Integer.parseInt(request.getParameter(<span class="string">"uage"</span>));</span><br><span class="line">		String pwd = request.getParameter(<span class="string">"upwd"</span>);</span><br><span class="line">		String[] hobbies = request.getParameterValues(<span class="string">"uhobbies"</span>);</span><br><span class="line">	%&gt;</span><br><span class="line">	注册成功,信息如下:</span><br><span class="line">	&lt;br /&gt; 姓名:&lt;%=name%&gt;&lt;br /&gt; 年龄:&lt;%=age%&gt;&lt;br /&gt; 密码:&lt;%=pwd%&gt;&lt;br /&gt; 爱好:</span><br><span class="line">	&lt;br /&gt;</span><br><span class="line"></span><br><span class="line">	&lt;%</span><br><span class="line">		<span class="keyword">if</span> (hobbies != <span class="keyword">null</span>) &#123;</span><br><span class="line">			<span class="keyword">for</span> (String hobby : hobbies) &#123;</span><br><span class="line">				out.print(hobby + <span class="string">"&amp;nbsp;"</span>);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	%&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">http:<span class="comment">//localhost:8888/MyProject/show.jsp?uname=zc%27&amp;upwd=abc&amp;uage=23&amp;uhobbies=%E8%B6%B3%E7%90%83&amp;uhobbies=%E7%AF%AE%E7%90%83&amp;uhobbies=%E4%B9%92%E4%B9%93%E7%90%83</span></span><br><span class="line">连接/文件?参数名<span class="number">1</span>=参数值<span class="number">1</span> &amp; 参数名<span class="number">2</span>=参数值<span class="number">2</span> &amp; 参数名<span class="number">1</span>=参数值<span class="number">1</span></span><br><span class="line"></span><br><span class="line">get提交方式: method=<span class="string">"get"</span>和 地址栏,超链接(&lt;a href=<span class="string">"xx"</span>&gt;) 请求方式 默认都属于get提交方式</span><br><span class="line"></span><br><span class="line">get与post请求方式的区别:</span><br><span class="line">    a.get方式 在地址栏显示 请求信息(但是地址栏能容纳的信息有限,<span class="number">4</span>-<span class="number">5</span>KB,如果请求数据存在大文件,图片等,会出现地址栏无法容纳全部的数据而出错);</span><br><span class="line">    post不会显示;</span><br><span class="line">    b. 文件上传操作,必须是post</span><br><span class="line">    	推荐用post</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>统一请求的编码request</p>
+<ol>
+<li><p>get方式请求 如果出现乱码,解诀</p>
+<ol>
+<li><p>统一每一个变量的<strong>编码</strong>(不推荐)</p>
+<ol>
+<li><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> String(旧编码,新编码); </span><br><span class="line"> name = <span class="keyword">new</span> String(name,getBytest(<span class="string">"iso-8859-1"</span>),<span class="string">"utf-8"</span>);</span><br></pre></td></tr></table></figure>
 
+
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<pre><code>2. 修改server.xml,一次性的 更改tomcat默认get提交方式的编码(utf-8)
+
+   1. 建议 使用tomcat时,首先在server.xml中 统一get方式的编码
+   2. URIEncoding=&quot;UTF-8&quot;</code></pre><ol start="2">
+<li><p>post方式请求 如果出现乱码,解诀</p>
+<ol>
+<li><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">request.setCharacterEncoding(<span class="string">"utf-8"</span>);</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ol>
+</li>
+</ol>
+<pre><code>2. </code></pre>
       
 
       
@@ -396,7 +459,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#配置tomcat运行时环境"><span class="toc-number">1.</span> <span class="toc-text">配置tomcat运行时环境</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#部署tomcat"><span class="toc-number">2.</span> <span class="toc-text">部署tomcat</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#JSP的页面元素"><span class="toc-number">3.</span> <span class="toc-text">JSP的页面元素</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#脚本Scripelet"><span class="toc-number">3.1.</span> <span class="toc-text">脚本Scripelet</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#指令"><span class="toc-number">3.2.</span> <span class="toc-text">指令</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#在Eclipse中创建的web项目"><span class="toc-number">1.</span> <span class="toc-text">在Eclipse中创建的web项目:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#配置tomcat运行时环境"><span class="toc-number">2.</span> <span class="toc-text">配置tomcat运行时环境</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#部署tomcat"><span class="toc-number">3.</span> <span class="toc-text">部署tomcat</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#统一字符编码"><span class="toc-number">4.</span> <span class="toc-text">统一字符编码</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#JSP的页面元素"><span class="toc-number">5.</span> <span class="toc-text">JSP的页面元素</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#脚本Scripelet"><span class="toc-number">5.1.</span> <span class="toc-text">脚本Scripelet</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#指令"><span class="toc-number">5.2.</span> <span class="toc-text">指令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#示例"><span class="toc-number">5.2.1.</span> <span class="toc-text">示例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#注册"><span class="toc-number">5.2.1.1.</span> <span class="toc-text">注册</span></a></li></ol></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -524,11 +587,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
+                <a href="javascript:void(0)" class="js-tag color3">javaweb</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">javaweb</a>
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
