@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Javaweb JDBC | 凌</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="可以为多种关系型数据库DBMS 用java来操作数据库 JDBC API:提供各种操作访问接口，Connection Statement PreParedStatement ResultSet JDBC DriveManager: 管理不同的数据库驱动  JDBCDriverManager 管理JDBC驱动  Connection 连接  Statement(PrepareStatement)">
+  <meta name="description" content="可以为多种关系型数据库DBMS 用java来操作数据库 JDBC API:提供各种操作访问接口，Connection Statement PreParedStatement ResultSet JDBC DriveManager: 管理不同的数据库驱动  JDBCDriverManager 管理JDBC驱动  Connection 连接(通过DriverManager产生)  Statement">
 <meta name="keywords" content="javaweb">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Javaweb JDBC">
 <meta property="og:url" content="http://yoursite.com/2019/10/14/Javaweb-JDBC/index.html">
 <meta property="og:site_name" content="凌">
-<meta property="og:description" content="可以为多种关系型数据库DBMS 用java来操作数据库 JDBC API:提供各种操作访问接口，Connection Statement PreParedStatement ResultSet JDBC DriveManager: 管理不同的数据库驱动  JDBCDriverManager 管理JDBC驱动  Connection 连接  Statement(PrepareStatement)">
+<meta property="og:description" content="可以为多种关系型数据库DBMS 用java来操作数据库 JDBC API:提供各种操作访问接口，Connection Statement PreParedStatement ResultSet JDBC DriveManager: 管理不同的数据库驱动  JDBCDriverManager 管理JDBC驱动  Connection 连接(通过DriverManager产生)  Statement">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-15T12:49:59.302Z">
+<meta property="og:updated_time" content="2019-10-16T12:00:30.732Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Javaweb JDBC">
-<meta name="twitter:description" content="可以为多种关系型数据库DBMS 用java来操作数据库 JDBC API:提供各种操作访问接口，Connection Statement PreParedStatement ResultSet JDBC DriveManager: 管理不同的数据库驱动  JDBCDriverManager 管理JDBC驱动  Connection 连接  Statement(PrepareStatement)">
+<meta name="twitter:description" content="可以为多种关系型数据库DBMS 用java来操作数据库 JDBC API:提供各种操作访问接口，Connection Statement PreParedStatement ResultSet JDBC DriveManager: 管理不同的数据库驱动  JDBCDriverManager 管理JDBC驱动  Connection 连接(通过DriverManager产生)  Statement">
   
     <link rel="alternative" href="/atom.xml" title="凌" type="application/atom+xml">
   
@@ -78,13 +78,8 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="qq" target="_blank" href="/1148199821" title="qq"><i class="icon-qq"></i></a>
-		        
-					<a class="bilibili" target="_blank" href="/凌" title="bilibili"><i class="icon-bilibili"></i></a>
-		        
-					<a class="mail" target="_blank" href="/1148199821@qq.com" title="mail"><i class="icon-mail"></i></a>
-		        
 			</div>
+			<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=260 height=86 src="//music.163.com/outchain/player?type=2&id=28151052&auto=1&height=66"></iframe>
 		</nav>
 	</header>		
 </div>
@@ -117,12 +112,6 @@
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="qq" target="_blank" href="/1148199821" title="qq"><i class="icon-qq"></i></a>
-			        
-						<a class="bilibili" target="_blank" href="/凌" title="bilibili"><i class="icon-bilibili"></i></a>
-			        
-						<a class="mail" target="_blank" href="/1148199821@qq.com" title="mail"><i class="icon-mail"></i></a>
-			        
 				</div>
 			</nav>
 
@@ -176,16 +165,16 @@
 <p>管理JDBC驱动</p>
 </blockquote>
 <h2 id="Connection"><a href="#Connection" class="headerlink" title="Connection"></a>Connection</h2><blockquote>
-<p>连接</p>
+<p>连接(通过DriverManager产生)</p>
 </blockquote>
 <h2 id="Statement-PrepareStatement"><a href="#Statement-PrepareStatement" class="headerlink" title="Statement(PrepareStatement)"></a>Statement(PrepareStatement)</h2><blockquote>
-<p>增删改查</p>
+<p>增删改查（通过Connection产生）</p>
 </blockquote>
 <h2 id="CallableStatement"><a href="#CallableStatement" class="headerlink" title="CallableStatement"></a>CallableStatement</h2><blockquote>
-<p>调用数据库中的 存储过程/存储函数</p>
+<p>调用数据库中的 存储过程/存储函数（通过Connection产生）</p>
 </blockquote>
 <h2 id="Result"><a href="#Result" class="headerlink" title="Result"></a>Result</h2><blockquote>
-<p>返回的结果集</p>
+<p>返回的结果集(上面的statement产生)</p>
 </blockquote>
 <h2 id="JDBC访问数据库的具体步骤"><a href="#JDBC访问数据库的具体步骤" class="headerlink" title="JDBC访问数据库的具体步骤"></a>JDBC访问数据库的具体步骤</h2><ol>
 <li>导入驱动，加载具体的驱动类</li>
@@ -425,19 +414,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">javaweb</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">CV大法</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">java</a>
+                <a href="javascript:void(0)" class="js-tag color3">javaweb</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
