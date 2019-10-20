@@ -158,7 +158,10 @@
 <p>JDBC API:提供各种操作访问接口，Connection Statement PreParedStatement ResultSet</p>
 <p>JDBC DriveManager: 管理不同的数据库驱动</p>
 </blockquote>
-<h1 id="JDBC"><a href="#JDBC" class="headerlink" title="JDBC"></a>JDBC</h1><h2 id="DriverManager"><a href="#DriverManager" class="headerlink" title="DriverManager"></a>DriverManager</h2><blockquote>
+<h1 id="JDBC"><a href="#JDBC" class="headerlink" title="JDBC"></a>JDBC</h1><blockquote>
+<p> pstmt可以有效防止sql注入</p>
+</blockquote>
+<h2 id="DriverManager"><a href="#DriverManager" class="headerlink" title="DriverManager"></a>DriverManager</h2><blockquote>
 <p>管理JDBC驱动</p>
 </blockquote>
 <h2 id="Connection"><a href="#Connection" class="headerlink" title="Connection"></a>Connection</h2><blockquote>
@@ -179,7 +182,21 @@
 <li>发送sql，执行</li>
 <li>处理结果集(查询)</li>
 </ol>
-
+<h1 id="处理CLOB-BLOB类型"><a href="#处理CLOB-BLOB类型" class="headerlink" title="处理CLOB/BLOB类型"></a>处理CLOB/BLOB类型</h1><h2 id="处理稍大数据"><a href="#处理稍大数据" class="headerlink" title="处理稍大数据"></a>处理稍大数据</h2><h3 id="存放路径"><a href="#存放路径" class="headerlink" title="存放路径"></a>存放路径</h3><p>通过JDBC存储文件路径 然后 根据IO操作处理</p>
+<h3 id="存储类型"><a href="#存储类型" class="headerlink" title="存储类型"></a>存储类型</h3><h4 id="CLOB-大文本数据-小说-gt-数据-字符流"><a href="#CLOB-大文本数据-小说-gt-数据-字符流" class="headerlink" title="CLOB:大文本数据(小说-&gt;数据)  字符流"></a>CLOB:大文本数据(小说-&gt;数据)  字符流</h4><ul>
+<li>存<ul>
+<li>先通过pstm的?代替小说内容(占位符)</li>
+<li>在通过pstm.setChrarcterStream(2,reader,(int)file.length());将上一步的?替换为小说流</li>
+</ul>
+</li>
+<li>取<ul>
+<li>通过Reader reader = rs.getCharacterStream(“NOVEL”);;将cloc类型的数据 保存到Reader对象中</li>
+<li>将Reader通过writer输出即可。</li>
+</ul>
+</li>
+</ul>
+<h4 id="BLOB-二进制"><a href="#BLOB-二进制" class="headerlink" title="BLOB:二进制"></a>BLOB:二进制</h4><p>与CLOB的步骤基本一致，区别，getBinaryStream(…);</p>
+<h1 id="JSP访问数据库"><a href="#JSP访问数据库" class="headerlink" title="JSP访问数据库"></a>JSP访问数据库</h1>
       
 
       
@@ -1100,15 +1117,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">javaweb</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">CV大法</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">javaweb</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1120,11 +1137,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+                <a href="javascript:void(0)" class="js-tag color4">虚拟机</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">虚拟机</a>
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
               <li class="article-tag-list-item">

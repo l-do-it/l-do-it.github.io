@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Javaweb JDBC | 凌</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="可以为多种关系型数据库DBMS 用java来操作数据库 JDBC API:提供各种操作访问接口，Connection Statement PreParedStatement ResultSet JDBC DriveManager: 管理不同的数据库驱动  JDBCDriverManager 管理JDBC驱动  Connection 连接(通过DriverManager产生)  Statement">
+  <meta name="description" content="可以为多种关系型数据库DBMS 用java来操作数据库 JDBC API:提供各种操作访问接口，Connection Statement PreParedStatement ResultSet JDBC DriveManager: 管理不同的数据库驱动  JDBC  pstmt可以有效防止sql注入  DriverManager 管理JDBC驱动  Connection 连接(通过DriverM">
 <meta name="keywords" content="javaweb">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Javaweb JDBC">
 <meta property="og:url" content="http://yoursite.com/2019/10/14/Javaweb-JDBC/index.html">
 <meta property="og:site_name" content="凌">
-<meta property="og:description" content="可以为多种关系型数据库DBMS 用java来操作数据库 JDBC API:提供各种操作访问接口，Connection Statement PreParedStatement ResultSet JDBC DriveManager: 管理不同的数据库驱动  JDBCDriverManager 管理JDBC驱动  Connection 连接(通过DriverManager产生)  Statement">
+<meta property="og:description" content="可以为多种关系型数据库DBMS 用java来操作数据库 JDBC API:提供各种操作访问接口，Connection Statement PreParedStatement ResultSet JDBC DriveManager: 管理不同的数据库驱动  JDBC  pstmt可以有效防止sql注入  DriverManager 管理JDBC驱动  Connection 连接(通过DriverM">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-16T12:00:30.732Z">
+<meta property="og:updated_time" content="2019-10-20T06:29:06.014Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Javaweb JDBC">
-<meta name="twitter:description" content="可以为多种关系型数据库DBMS 用java来操作数据库 JDBC API:提供各种操作访问接口，Connection Statement PreParedStatement ResultSet JDBC DriveManager: 管理不同的数据库驱动  JDBCDriverManager 管理JDBC驱动  Connection 连接(通过DriverManager产生)  Statement">
+<meta name="twitter:description" content="可以为多种关系型数据库DBMS 用java来操作数据库 JDBC API:提供各种操作访问接口，Connection Statement PreParedStatement ResultSet JDBC DriveManager: 管理不同的数据库驱动  JDBC  pstmt可以有效防止sql注入  DriverManager 管理JDBC驱动  Connection 连接(通过DriverM">
   
     <link rel="alternative" href="/atom.xml" title="凌" type="application/atom+xml">
   
@@ -161,7 +161,10 @@
 <p>JDBC API:提供各种操作访问接口，Connection Statement PreParedStatement ResultSet</p>
 <p>JDBC DriveManager: 管理不同的数据库驱动</p>
 </blockquote>
-<h1 id="JDBC"><a href="#JDBC" class="headerlink" title="JDBC"></a>JDBC</h1><h2 id="DriverManager"><a href="#DriverManager" class="headerlink" title="DriverManager"></a>DriverManager</h2><blockquote>
+<h1 id="JDBC"><a href="#JDBC" class="headerlink" title="JDBC"></a>JDBC</h1><blockquote>
+<p> pstmt可以有效防止sql注入</p>
+</blockquote>
+<h2 id="DriverManager"><a href="#DriverManager" class="headerlink" title="DriverManager"></a>DriverManager</h2><blockquote>
 <p>管理JDBC驱动</p>
 </blockquote>
 <h2 id="Connection"><a href="#Connection" class="headerlink" title="Connection"></a>Connection</h2><blockquote>
@@ -182,7 +185,21 @@
 <li>发送sql，执行</li>
 <li>处理结果集(查询)</li>
 </ol>
-
+<h1 id="处理CLOB-BLOB类型"><a href="#处理CLOB-BLOB类型" class="headerlink" title="处理CLOB/BLOB类型"></a>处理CLOB/BLOB类型</h1><h2 id="处理稍大数据"><a href="#处理稍大数据" class="headerlink" title="处理稍大数据"></a>处理稍大数据</h2><h3 id="存放路径"><a href="#存放路径" class="headerlink" title="存放路径"></a>存放路径</h3><p>通过JDBC存储文件路径 然后 根据IO操作处理</p>
+<h3 id="存储类型"><a href="#存储类型" class="headerlink" title="存储类型"></a>存储类型</h3><h4 id="CLOB-大文本数据-小说-gt-数据-字符流"><a href="#CLOB-大文本数据-小说-gt-数据-字符流" class="headerlink" title="CLOB:大文本数据(小说-&gt;数据)  字符流"></a>CLOB:大文本数据(小说-&gt;数据)  字符流</h4><ul>
+<li>存<ul>
+<li>先通过pstm的?代替小说内容(占位符)</li>
+<li>在通过pstm.setChrarcterStream(2,reader,(int)file.length());将上一步的?替换为小说流</li>
+</ul>
+</li>
+<li>取<ul>
+<li>通过Reader reader = rs.getCharacterStream(“NOVEL”);;将cloc类型的数据 保存到Reader对象中</li>
+<li>将Reader通过writer输出即可。</li>
+</ul>
+</li>
+</ul>
+<h4 id="BLOB-二进制"><a href="#BLOB-二进制" class="headerlink" title="BLOB:二进制"></a>BLOB:二进制</h4><p>与CLOB的步骤基本一致，区别，getBinaryStream(…);</p>
+<h1 id="JSP访问数据库"><a href="#JSP访问数据库" class="headerlink" title="JSP访问数据库"></a>JSP访问数据库</h1>
       
 
       
@@ -294,7 +311,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#JDBC"><span class="toc-number">1.</span> <span class="toc-text">JDBC</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#DriverManager"><span class="toc-number">1.1.</span> <span class="toc-text">DriverManager</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Connection"><span class="toc-number">1.2.</span> <span class="toc-text">Connection</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Statement-PrepareStatement"><span class="toc-number">1.3.</span> <span class="toc-text">Statement(PrepareStatement)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CallableStatement"><span class="toc-number">1.4.</span> <span class="toc-text">CallableStatement</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Result"><span class="toc-number">1.5.</span> <span class="toc-text">Result</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JDBC访问数据库的具体步骤"><span class="toc-number">1.6.</span> <span class="toc-text">JDBC访问数据库的具体步骤</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#JDBC"><span class="toc-number">1.</span> <span class="toc-text">JDBC</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#DriverManager"><span class="toc-number">1.1.</span> <span class="toc-text">DriverManager</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Connection"><span class="toc-number">1.2.</span> <span class="toc-text">Connection</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Statement-PrepareStatement"><span class="toc-number">1.3.</span> <span class="toc-text">Statement(PrepareStatement)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CallableStatement"><span class="toc-number">1.4.</span> <span class="toc-text">CallableStatement</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Result"><span class="toc-number">1.5.</span> <span class="toc-text">Result</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JDBC访问数据库的具体步骤"><span class="toc-number">1.6.</span> <span class="toc-text">JDBC访问数据库的具体步骤</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#处理CLOB-BLOB类型"><span class="toc-number">2.</span> <span class="toc-text">处理CLOB/BLOB类型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#处理稍大数据"><span class="toc-number">2.1.</span> <span class="toc-text">处理稍大数据</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#存放路径"><span class="toc-number">2.1.1.</span> <span class="toc-text">存放路径</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#存储类型"><span class="toc-number">2.1.2.</span> <span class="toc-text">存储类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#CLOB-大文本数据-小说-gt-数据-字符流"><span class="toc-number">2.1.2.1.</span> <span class="toc-text">CLOB:大文本数据(小说-&gt;数据)  字符流</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#BLOB-二进制"><span class="toc-number">2.1.2.2.</span> <span class="toc-text">BLOB:二进制</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#JSP访问数据库"><span class="toc-number">3.</span> <span class="toc-text">JSP访问数据库</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -414,15 +431,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">javaweb</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">CV大法</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">javaweb</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -434,11 +451,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+                <a href="javascript:void(0)" class="js-tag color4">虚拟机</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">虚拟机</a>
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
               <li class="article-tag-list-item">
