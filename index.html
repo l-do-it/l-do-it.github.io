@@ -133,6 +133,79 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-MVC模式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/20/MVC模式/">MVC模式</a>
+    </h1>
+  
+
+        
+        <a href="/2019/10/20/MVC模式/" class="archive-article-date">
+  	<time datetime="2019-10-20T12:23:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-20</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">javaweb</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/10/20/MVC模式/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Javaweb-JDBC" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -158,45 +231,7 @@
 <p>JDBC API:提供各种操作访问接口，Connection Statement PreParedStatement ResultSet</p>
 <p>JDBC DriveManager: 管理不同的数据库驱动</p>
 </blockquote>
-<h1 id="JDBC"><a href="#JDBC" class="headerlink" title="JDBC"></a>JDBC</h1><blockquote>
-<p> pstmt可以有效防止sql注入</p>
-</blockquote>
-<h2 id="DriverManager"><a href="#DriverManager" class="headerlink" title="DriverManager"></a>DriverManager</h2><blockquote>
-<p>管理JDBC驱动</p>
-</blockquote>
-<h2 id="Connection"><a href="#Connection" class="headerlink" title="Connection"></a>Connection</h2><blockquote>
-<p>连接(通过DriverManager产生)</p>
-</blockquote>
-<h2 id="Statement-PrepareStatement"><a href="#Statement-PrepareStatement" class="headerlink" title="Statement(PrepareStatement)"></a>Statement(PrepareStatement)</h2><blockquote>
-<p>增删改查（通过Connection产生）</p>
-</blockquote>
-<h2 id="CallableStatement"><a href="#CallableStatement" class="headerlink" title="CallableStatement"></a>CallableStatement</h2><blockquote>
-<p>调用数据库中的 存储过程/存储函数（通过Connection产生）</p>
-</blockquote>
-<h2 id="Result"><a href="#Result" class="headerlink" title="Result"></a>Result</h2><blockquote>
-<p>返回的结果集(上面的statement产生)</p>
-</blockquote>
-<h2 id="JDBC访问数据库的具体步骤"><a href="#JDBC访问数据库的具体步骤" class="headerlink" title="JDBC访问数据库的具体步骤"></a>JDBC访问数据库的具体步骤</h2><ol>
-<li>导入驱动，加载具体的驱动类</li>
-<li>与数据库建立连接</li>
-<li>发送sql，执行</li>
-<li>处理结果集(查询)</li>
-</ol>
-<h1 id="处理CLOB-BLOB类型"><a href="#处理CLOB-BLOB类型" class="headerlink" title="处理CLOB/BLOB类型"></a>处理CLOB/BLOB类型</h1><h2 id="处理稍大数据"><a href="#处理稍大数据" class="headerlink" title="处理稍大数据"></a>处理稍大数据</h2><h3 id="存放路径"><a href="#存放路径" class="headerlink" title="存放路径"></a>存放路径</h3><p>通过JDBC存储文件路径 然后 根据IO操作处理</p>
-<h3 id="存储类型"><a href="#存储类型" class="headerlink" title="存储类型"></a>存储类型</h3><h4 id="CLOB-大文本数据-小说-gt-数据-字符流"><a href="#CLOB-大文本数据-小说-gt-数据-字符流" class="headerlink" title="CLOB:大文本数据(小说-&gt;数据)  字符流"></a>CLOB:大文本数据(小说-&gt;数据)  字符流</h4><ul>
-<li>存<ul>
-<li>先通过pstm的?代替小说内容(占位符)</li>
-<li>在通过pstm.setChrarcterStream(2,reader,(int)file.length());将上一步的?替换为小说流</li>
-</ul>
-</li>
-<li>取<ul>
-<li>通过Reader reader = rs.getCharacterStream(“NOVEL”);;将cloc类型的数据 保存到Reader对象中</li>
-<li>将Reader通过writer输出即可。</li>
-</ul>
-</li>
-</ul>
-<h4 id="BLOB-二进制"><a href="#BLOB-二进制" class="headerlink" title="BLOB:二进制"></a>BLOB:二进制</h4><p>与CLOB的步骤基本一致，区别，getBinaryStream(…);</p>
-<h1 id="JSP访问数据库"><a href="#JSP访问数据库" class="headerlink" title="JSP访问数据库"></a>JSP访问数据库</h1>
+        
       
 
       
@@ -899,119 +934,6 @@
 
 
   
-    <article id="post-JS" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/25/JS/">JS</a>
-    </h1>
-  
-
-        
-        <a href="/2019/08/25/JS/" class="archive-article-date">
-  	<time datetime="2019-08-25T02:54:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="js的声明"><a href="#js的声明" class="headerlink" title="js的声明"></a>js的声明</h1><ul>
-<li><p>在head标签中使用script标签进行js代码域的声明</p>
-<ul>
-<li><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- js代码域 --&gt;</span><br><span class="line">		&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">			alert(<span class="string">"这是我的第一个js"</span>)</span><br><span class="line">		&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>作用：<ul>
-<li>声明js代码域</li>
-</ul>
-</li>
-<li>特点：js的代码只会作用于当前网页</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>在head标签中使用script标签引入外部声明好的js文件</p>
-<ul>
-<li><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">alert(<span class="string">"我是外部声明方式"</span>)</span><br><span class="line">&lt;script src=<span class="string">"js/myjs.js"</span> type=<span class="string">"text/javascript"</span> charset=<span class="string">"utf-8"</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>作用：引入外部声明好的js文件</li>
-<li>特点：<ul>
-<li>实现js代码的重复使用，避免代码的冗余。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>注意：</p>
-<ul>
-<li>因为js在HTML文档中是一门单独的语言，可以声明在文档中的任意位置。</li>
-<li>一般情况下声明在head标签中。</li>
-</ul>
-</li>
-</ul>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">js数组</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/25/JS/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1117,15 +1039,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">javaweb</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">CV大法</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">javaweb</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1137,11 +1059,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">虚拟机</a>
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+                <a href="javascript:void(0)" class="js-tag color4">虚拟机</a>
               </li>
              
               <li class="article-tag-list-item">
