@@ -6,17 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>MVC模式 | 凌</title>
+  <title>Servlet | 凌</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="javaweb">
+  <meta name="description" content="M:Model(模型) 一个功能。   用JavaBean实现。 处理业务逻辑(封装业务逻辑的JavaBean) 处理数据(封装数据的JavaBean)">
+<meta name="keywords" content="javaweb">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MVC模式">
+<meta property="og:title" content="Servlet">
 <meta property="og:url" content="http://yoursite.com/2019/10/20/MVC模式/index.html">
 <meta property="og:site_name" content="凌">
+<meta property="og:description" content="M:Model(模型) 一个功能。   用JavaBean实现。 处理业务逻辑(封装业务逻辑的JavaBean) 处理数据(封装数据的JavaBean)">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-20T12:24:13.433Z">
+<meta property="og:updated_time" content="2019-10-27T12:44:07.774Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MVC模式">
+<meta name="twitter:title" content="Servlet">
+<meta name="twitter:description" content="M:Model(模型) 一个功能。   用JavaBean实现。 处理业务逻辑(封装业务逻辑的JavaBean) 处理数据(封装数据的JavaBean)">
   
     <link rel="alternative" href="/atom.xml" title="凌" type="application/atom+xml">
   
@@ -140,7 +143,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      MVC模式
+      Servlet
     </h1>
   
 
@@ -153,7 +156,31 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="M-Model-模型"><a href="#M-Model-模型" class="headerlink" title="M:Model(模型)"></a>M:Model(模型)</h1><blockquote>
+<p>一个功能。</p>
+</blockquote>
+<ul>
+<li>用JavaBean实现。</li>
+<li>处理业务逻辑(封装业务逻辑的JavaBean)</li>
+<li>处理数据(封装数据的JavaBean)</li>
+</ul>
+<a id="more"></a>
+
+<h1 id="V-View-视图"><a href="#V-View-视图" class="headerlink" title="V:View 视图"></a>V:View 视图</h1><ul>
+<li>用于展示，以及与用户交互。使用html js css jsp jquery等前端技术实现</li>
+<li>界面展示</li>
+<li>人机交互</li>
+</ul>
+<h1 id="C-Controller-控制器"><a href="#C-Controller-控制器" class="headerlink" title="C:Controller 控制器"></a>C:Controller 控制器</h1><ul>
+<li>接受请求，将请求跳转到模型进行处理，模型处理完毕后，再将处理的结构返回给请求处。可以用jsp实现，但是一般建议使用Servlet实现控制器。</li>
+<li>视图，模型的选择(分发)</li>
+</ul>
+<h1 id="Servlet-API"><a href="#Servlet-API" class="headerlink" title="Servlet API"></a>Servlet API</h1><p>有两个软件包组成，对应于HTTP协议，对应于除了HTTP协议以外的其他软件包，即Servlet API可以适用于任何通信协议</p>
+<h1 id="Servlet继承关系"><a href="#Servlet继承关系" class="headerlink" title="Servlet继承关系"></a>Servlet继承关系</h1><h2 id="ServletConfig-接口"><a href="#ServletConfig-接口" class="headerlink" title="ServletConfig:接口"></a>ServletConfig:接口</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">getServletContext();<span class="comment">//获取Servlet上下文对象 applicartion</span></span><br><span class="line">getInitParameter(String name);<span class="comment">//在当前Servlet范围内，获取名为name的参数值(初始化参数)</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="ServletContext中常见的方法-application"><a href="#ServletContext中常见的方法-application" class="headerlink" title="ServletContext中常见的方法(application)"></a>ServletContext中常见的方法(application)</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">getContestPath();<span class="comment">//相对路径</span></span><br><span class="line">getRealPath();<span class="comment">//绝对路径</span></span><br><span class="line">setAttribute()，getAttribute()--&gt;</span><br><span class="line">    	<span class="function">String <span class="title">getInitParameter</span><span class="params">(String name)</span></span>;在当前web容器内，获取名为name的参数值(初始化参数)</span><br></pre></td></tr></table></figure>
+
+
       
 
       
@@ -265,7 +292,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#M-Model-模型"><span class="toc-number">1.</span> <span class="toc-text">M:Model(模型)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#V-View-视图"><span class="toc-number">2.</span> <span class="toc-text">V:View 视图</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#C-Controller-控制器"><span class="toc-number">3.</span> <span class="toc-text">C:Controller 控制器</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Servlet-API"><span class="toc-number">4.</span> <span class="toc-text">Servlet API</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Servlet继承关系"><span class="toc-number">5.</span> <span class="toc-text">Servlet继承关系</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#ServletConfig-接口"><span class="toc-number">5.1.</span> <span class="toc-text">ServletConfig:接口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ServletContext中常见的方法-application"><span class="toc-number">5.1.1.</span> <span class="toc-text">ServletContext中常见的方法(application)</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -385,15 +412,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">javaweb</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">CV大法</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">javaweb</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -405,11 +432,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+                <a href="javascript:void(0)" class="js-tag color4">虚拟机</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">虚拟机</a>
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
               <li class="article-tag-list-item">
