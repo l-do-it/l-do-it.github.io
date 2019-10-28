@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="凌">
 <meta property="og:description" content="此篇代码只保证能过ACM的判题机，不保证为最优算法  判定素数">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-28T11:26:56.280Z">
+<meta property="og:updated_time" content="2019-10-28T15:28:54.873Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Zero">
 <meta name="twitter:description" content="此篇代码只保证能过ACM的判题机，不保证为最优算法  判定素数">
@@ -167,6 +167,8 @@
 
 <h1 id="1065-C语言程序设计教程（第三版）课后习题6-3"><a href="#1065-C语言程序设计教程（第三版）课后习题6-3" class="headerlink" title="1065: C语言程序设计教程（第三版）课后习题6.3"></a>1065: C语言程序设计教程（第三版）课后习题6.3</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> b=<span class="number">1</span>,n,i,sum=<span class="number">0</span>,v=<span class="number">0</span>;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">	&#123;</span><br><span class="line">	    sum=sum+<span class="number">2</span>*b;</span><br><span class="line">		b=b*<span class="number">10</span>;</span><br><span class="line">		v=v+sum;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>,v);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<h1 id="1104-5个数求最值"><a href="#1104-5个数求最值" class="headerlink" title="1104: 5个数求最值"></a>1104: 5个数求最值</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i,t,j;</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span>  a[<span class="number">10</span>],max,min;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;t);</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=t;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;<span class="number">5</span>;j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">"%lld"</span>,&amp;a[j]);</span><br><span class="line">        &#125;</span><br><span class="line">        max=a[<span class="number">1</span>];</span><br><span class="line">        min=a[<span class="number">1</span>];</span><br><span class="line">        <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;<span class="number">5</span>;j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(max&lt;=a[j])</span><br><span class="line">            &#123;</span><br><span class="line">                max=a[j];</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(min&gt;=a[j])</span><br><span class="line">            &#123;</span><br><span class="line">                min=a[j];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%lld %lld\n"</span>,min,max);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
       
 
@@ -283,7 +285,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#判定素数"><span class="toc-number">1.</span> <span class="toc-text">判定素数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1333-n个数求和"><span class="toc-number">2.</span> <span class="toc-text">1333: n个数求和</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1065-C语言程序设计教程（第三版）课后习题6-3"><span class="toc-number">3.</span> <span class="toc-text">1065: C语言程序设计教程（第三版）课后习题6.3</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#判定素数"><span class="toc-number">1.</span> <span class="toc-text">判定素数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1333-n个数求和"><span class="toc-number">2.</span> <span class="toc-text">1333: n个数求和</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1065-C语言程序设计教程（第三版）课后习题6-3"><span class="toc-number">3.</span> <span class="toc-text">1065: C语言程序设计教程（第三版）课后习题6.3</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1104-5个数求最值"><span class="toc-number">4.</span> <span class="toc-text">1104: 5个数求最值</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -419,7 +421,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">小橘灯</a>
+                <a href="javascript:void(0)" class="js-tag color4">虚拟机</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -427,15 +429,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">虚拟机</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">笔记本</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">自用</a>
+                <a href="javascript:void(0)" class="js-tag color4">小橘灯</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -444,6 +438,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">js数组</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">笔记本</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">自用</a>
               </li>
             
             <div class="clearfix"></div>
